@@ -139,6 +139,33 @@
       "commands": [
         "revealInExplorer",
       ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "Q"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInOtherGroups"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g"
+      ],
+      "commands": [
+        "lazygit.openLazygit"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.toggleMaximizeEditorGroup"
+      ]
     }
   ],
   "vim.smartRelativeLine": true,
