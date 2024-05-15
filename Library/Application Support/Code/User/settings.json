@@ -232,5 +232,6 @@
     "asvetliakov.vscode-neovim": 1
   },
   "workbench.colorTheme": "Default Light+",
-  "workbench.editor.showTabs": "single"
+  "workbench.editor.showTabs": "single",
+  "workbench.activityBar.location": "bottom"
 }

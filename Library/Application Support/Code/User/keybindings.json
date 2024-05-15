@@ -59,7 +59,7 @@
   },
   {
     "key": "alt alt",
-    "command": "workbench.action.showAllSymbols"
+    "command": "workbench.action.gotoSymbol"
   },
   {
     "key": "cmd+shift+'",
