@@ -74,4 +74,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Default Editor
+export VISUAL=nvim
+export EDITOR=nvim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
