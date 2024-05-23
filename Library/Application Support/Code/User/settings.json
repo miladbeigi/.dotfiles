@@ -98,6 +98,15 @@
     {
       "before": [
         "<leader>",
+        "Q"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
         "o"
       ],
       "commands": [
@@ -139,15 +148,6 @@
       "commands": [
         "revealInExplorer",
       ],
-    },
-    {
-      "before": [
-        "<leader>",
-        "Q"
-      ],
-      "commands": [
-        "workbench.action.closeEditorsInOtherGroups"
-      ]
     },
     {
       "before": [
