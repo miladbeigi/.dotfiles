@@ -64,7 +64,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Shell history plugin
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # pnpm
 export PNPM_HOME="/Users/milad/Library/pnpm"
@@ -78,3 +78,9 @@ esac
 export VISUAL=nvim
 export EDITOR=nvim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/milad/.local/share/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/milad/.local/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/milad/.local/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/milad/.local/share/google-cloud-sdk/completion.zsh.inc'; fi

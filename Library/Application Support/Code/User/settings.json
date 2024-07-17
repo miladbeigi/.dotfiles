@@ -32,6 +32,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.largeFileOptimizations": false,
   "editor.minimap.enabled": false,
+  "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "files.associations": {
     "*.jinja": "jinja",
     "*.yaml": "yaml"
@@ -59,6 +60,94 @@
   "vim.leader": " ",
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.normalModeKeyBindingsNonRecursive": [
+    // fold all
+    {
+      "before": [
+        "<leader>",
+        "z"
+      ],
+      "commands": [
+        "editor.foldAll"
+      ]
+    },
+    // unfold all
+    {
+      "before": [
+        "<leader>",
+        "Z"
+      ],
+      "commands": [
+        "editor.unfoldAll"
+      ]
+    },
+    // fold except selected
+    {
+      "before": [
+        "z",
+        "c"
+      ],
+      "commands": [
+        "editor.foldAllExcept"
+      ]
+    },
+    // Jump to a diagnostic
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ],
+    },
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ],
+    },
+    // Jump to a change in the file
+    {
+      "before": [
+        "]",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.editor.nextChange"
+      ],
+    },
+    {
+      "before": [
+        "[",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.editor.previousChange"
+      ],
+    },
+    // Find references
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    // Jump to type definition
+    {
+      "before": [
+        "<leader>",
+        "D"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
     {
       "before": [
         "<leader>",
@@ -71,7 +160,7 @@
     {
       "before": [
         "<leader>",
-        "e"
+        "b"
       ],
       "commands": [
         "workbench.action.toggleSidebarVisibility"
@@ -129,15 +218,6 @@
       ],
       "commands": [
         "workbench.action.navigateForward"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "/"
-      ],
-      "commands": [
-        "editor.action.commentLine"
       ]
     },
     {

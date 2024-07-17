@@ -112,21 +112,21 @@
     "command": "workbench.action.focusBelowGroup",
     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
-  {
-    "key": "tab",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
+  // {
+  //   "key": "tab",
+  //   "command": "selectNextSuggestion",
+  //   "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  // },
   {
     "key": "tab",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
   },
-  {
-    "key": "shift+tab",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
+  // {
+  //   "key": "shift+tab",
+  //   "command": "selectPrevSuggestion",
+  //   "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  // },
   {
     "key": "shift+tab",
     "command": "workbench.action.quickOpenNavigatePrevious",
