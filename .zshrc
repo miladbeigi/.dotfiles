@@ -1,19 +1,11 @@
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:/opt/homebrew/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
-# ZSH Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ZSH Plugins
-plugins=(z zsh-syntax-highlighting git docker docker-compose aws kubectl zsh-autosuggestions tmux terraform)
+plugins=(z git docker docker-compose aws kubectl tmux terraform)
 
 source $ZSH/oh-my-zsh.sh
 
