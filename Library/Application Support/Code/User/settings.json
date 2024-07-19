@@ -307,11 +307,11 @@
   },
   "extensions.ignoreRecommendations": true,
   "window.autoDetectColorScheme": true,
-  "workbench.preferredLightColorTheme": "Default Light+",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.showTabs": "single",
-  "workbench.activityBar.location": "bottom"
+  "workbench.activityBar.location": "bottom",
+  "workbench.preferredLightColorTheme": "Solarized Light"
 }

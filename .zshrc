@@ -76,3 +76,6 @@ if [ -f '/Users/milad/.local/share/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/milad/.local/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/milad/.local/share/google-cloud-sdk/completion.zsh.inc'; fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
