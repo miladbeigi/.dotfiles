@@ -8,7 +8,7 @@ fi
 ZSH_THEME="clean" # set by `omz`
 
 # Path
-export PATH=$HOME/.local/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/.local/bin:/opt/homebrew/bin:$HOME/.scripts:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -103,6 +103,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Load all functions from the ~/.scripts directory
+if [ -d ~/.scripts ]; then
+    for file in ~/.scripts/*.sh; do
+        [ -r "$file" ] && source "$file"
+    done
+fi
 
 # Default Editor
 export VISUAL=nvim
