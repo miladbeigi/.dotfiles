@@ -1,33 +1,35 @@
 {
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnType": true
   },
-  "[terraform]": {},
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "yaml.validate": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 2,
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
+  "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.largeFileOptimizations": false,
@@ -48,7 +50,8 @@
   },
   "json.schemas": [],
   "redhat.telemetry.enabled": false,
-  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "terminal.integrated.suggest.cdPath": "relative",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1",
     "CW_NEW_SESSION": "1"
@@ -62,214 +65,107 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     // fold all
     {
-      "before": [
-        "<leader>",
-        "z"
-      ],
-      "commands": [
-        "editor.foldAll"
-      ]
+      "before": ["<leader>", "z"],
+      "commands": ["editor.foldAll"]
     },
     // unfold all
     {
-      "before": [
-        "<leader>",
-        "Z"
-      ],
-      "commands": [
-        "editor.unfoldAll"
-      ]
+      "before": ["<leader>", "Z"],
+      "commands": ["editor.unfoldAll"]
     },
     // fold except selected
     {
-      "before": [
-        "z",
-        "c"
-      ],
-      "commands": [
-        "editor.foldAllExcept"
-      ]
+      "before": ["z", "c"],
+      "commands": ["editor.foldAllExcept"]
     },
     // Jump to a diagnostic
     {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.nextInFiles"
-      ],
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.nextInFiles"]
     },
     {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prevInFiles"
-      ],
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prevInFiles"]
     },
     // Jump to a change in the file
     {
-      "before": [
-        "]",
-        "c"
-      ],
-      "commands": [
-        "workbench.action.editor.nextChange"
-      ],
+      "before": ["]", "c"],
+      "commands": ["workbench.action.editor.nextChange"]
     },
     {
-      "before": [
-        "[",
-        "c"
-      ],
-      "commands": [
-        "workbench.action.editor.previousChange"
-      ],
+      "before": ["[", "c"],
+      "commands": ["workbench.action.editor.previousChange"]
     },
     // Find references
     {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.goToReferences"
-      ]
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
     },
     // Jump to type definition
     {
-      "before": [
-        "<leader>",
-        "D"
-      ],
-      "commands": [
-        "editor.action.goToTypeDefinition"
-      ]
+      "before": ["<leader>", "D"],
+      "commands": ["editor.action.goToTypeDefinition"]
     },
     {
-      "before": [
-        "<leader>",
-        " "
-      ],
-      "commands": [
-        "workbench.action.showCommands"
-      ]
+      "before": ["<leader>", " "],
+      "commands": ["workbench.action.showCommands"]
     },
     {
-      "before": [
-        "<leader>",
-        "b"
-      ],
-      "commands": [
-        "workbench.action.toggleSidebarVisibility"
-      ]
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": [
-        "<space>",
-        "s"
-      ],
-      "commands": [
-        "workbench.action.files.save"
-      ]
+      "before": ["<space>", "s"],
+      "commands": ["workbench.action.files.save"]
     },
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
-      "commands": [
-        "workbench.action.closeActiveEditor"
-      ]
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
     {
-      "before": [
-        "<leader>",
-        "Q"
-      ],
-      "commands": [
-        "workbench.action.closeOtherEditors"
-      ]
+      "before": ["<leader>", "Q"],
+      "commands": ["workbench.action.closeOtherEditors"]
     },
     {
-      "before": [
-        "<leader>",
-        "o"
-      ],
-      "commands": [
-        "workbench.action.showAllEditors"
-      ]
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.showAllEditors"]
     },
     {
-      "before": [
-        "<leader>",
-        "["
-      ],
-      "commands": [
-        "workbench.action.navigateBack"
-      ]
+      "before": ["<leader>", "["],
+      "commands": ["workbench.action.navigateBack"]
     },
     {
-      "before": [
-        "<leader>",
-        "]"
-      ],
-      "commands": [
-        "workbench.action.navigateForward"
-      ]
+      "before": ["<leader>", "]"],
+      "commands": ["workbench.action.navigateForward"]
     },
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "revealInExplorer",
-      ],
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
     },
     {
-      "before": [
-        "<leader>",
-        "g"
-      ],
-      "commands": [
-        "lazygit.openLazygit"
-      ]
+      "before": ["<leader>", "g"],
+      "commands": ["lazygit.openLazygit"]
     },
     {
-      "before": [
-        "<leader>",
-        "m"
-      ],
-      "commands": [
-        "workbench.action.toggleMaximizeEditorGroup"
-      ]
+      "before": ["<leader>", "m"],
+      "commands": ["workbench.action.toggleMaximizeEditorGroup"]
     }
   ],
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "J"
-      ],
-      "commands": [
-        "editor.action.moveLinesDownAction"
-      ]
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
     },
     {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.moveLinesUpAction"
-      ]
-    },
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
   ],
   "workbench.editorAssociations": {
-    "*.py": "default"
+    "*.py": "default",
+    "*.md": "vscode.markdown.preview.editor"
   },
   "workbench.startupEditor": "none",
   "yaml.customTags": [
@@ -313,5 +209,20 @@
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.showTabs": "single",
   "workbench.activityBar.location": "bottom",
-  "workbench.preferredLightColorTheme": "Solarized Light"
+  "workbench.preferredLightColorTheme": "Default Dark Modern",
+  "editor.renderWhitespace": "all",
+  "workbench.iconTheme": "vs-minimal",
+  "python.languageServer": "Pylance",
+  "[hcl]": {
+    "editor.defaultFormatter": "fredwangwang.vscode-hcl-format"
+  },
+  "rubyLsp.rubyExecutablePath": "/Users/milad/.rbenv/shims/ruby",
+  "remote.SSH.remotePlatform": {
+    "coder-vscode.cv2on1plhljom.pit-1.try.coder.app--miladbeigi--sample-workspace": "linux"
+  },
+  "remote.SSH.connectTimeout": 1800,
+  "editor.stickyScroll.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.cwd": "\"${fileDirname}\""
 }

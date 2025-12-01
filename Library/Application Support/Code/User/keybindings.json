@@ -9,6 +9,13 @@
     "command": "-bracketeer.removeBrackets"
   },
   {
+    "key": "cmd+shift+c",
+    "command": "workbench.action.terminal.newWithCwd",
+    "args": {
+      "cwd": "${fileDirname}"
+    }
+  },
+  {
     "key": "cmd+n",
     "command": "workbench.files.action.createFileFromExplorer",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
@@ -68,7 +75,7 @@
   },
   {
     "key": "cmd+shift+,",
-    "command": "workbench.panel.chat.view.copilot.focus",
+    "command": "workbench.panel.chat.view.copilot.focus"
   },
   // Vim like navigation in quick open
   {
@@ -131,5 +138,38 @@
     "key": "shift+tab",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+3",
+    "command": "-workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "cmd+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus"
   }
 ]
